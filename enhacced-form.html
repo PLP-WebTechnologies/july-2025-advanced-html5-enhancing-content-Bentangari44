@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Form Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        header, footer {
+            background-color: #004085;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        main {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+            background-color: white;
+        }
+        section {
+            margin-bottom: 30px;
+        }
+        form {
+            display: grid;
+            gap: 15px;
+        }
+        label {
+            font-weight: bold;
+        }
+        input, select, textarea, button {
+            padding: 10px;
+            font-size: 1rem;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 10px;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        button {
+            background-color: #004085;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #002752;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Enhanced Registration Form</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>About Our Services</h2>
+            <p>We provide top-quality training in web development, data analytics, and cybersecurity. Our programs include:</p>
+            <ul>
+                <li>Beginner to Advanced HTML & CSS</li>
+                <li>JavaScript & Python Programming</li>
+                <li>Cybersecurity Fundamentals</li>
+            </ul>
+            <figure>
+                <img src="https://via.placeholder.com/800x300" alt="Technology Training">
+                <figcaption>Join us to enhance your tech skills!</figcaption>
+            </figure>
+        </section>
+
+        <section>
+            <h2>Course Schedule</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Course</th>
+                        <th>Start Date</th>
+                        <th>Duration</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Web Development Bootcamp</td>
+                        <td>2025-09-01</td>
+                        <td>12 weeks</td>
+                    </tr>
+                    <tr>
+                        <td>Data Analytics with Python</td>
+                        <td>2025-10-05</td>
+                        <td>8 weeks</td>
+                    </tr>
+                    <tr>
+                        <td>Cybersecurity Essentials</td>
+                        <td>2025-11-10</td>
+                        <td>6 weeks</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2>Registration Form</h2>
+            <form action="#" method="post" autocomplete="on">
+                <div>
+                    <label for="fullname">Full Name:</label>
+                    <input type="text" id="fullname" name="fullname" placeholder="John Doe" required>
+                </div>
+                
+                <div>
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" placeholder="example@email.com" required>
+                </div>
+
+                <div>
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="+254700000000" pattern="^\+?\d{10,15}$" required>
+                </div>
+
+                <div>
+                    <label for="dob">Date of Birth:</label>
+                    <input type="date" id="dob" name="dob" required>
+                </div>
+
+                <div>
+                    <label for="gender">Gender:</label>
+                    <select id="gender" name="gender" required>
+                        <option value="">Select your gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Prefer not to say</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="course">Preferred Course:</label>
+                    <input list="courses" id="course" name="course" placeholder="Type or select a course" required>
+                    <datalist id="courses">
+                        <option value="Web Development Bootcamp">
+                        <option value="Data Analytics with Python">
+                        <option value="Cybersecurity Essentials">
+                    </datalist>
+                </div>
+
+                <div>
+                    <label for="comments">Additional Comments:</label>
+                    <textarea id="comments" name="comments" placeholder="Tell us more about your learning goals"></textarea>
+                </div>
+
+                <div>
+                    <label for="referral">Referral Code:</label>
+                    <input type="text" id="referral" name="referral" value="WELCOME2025" readonly>
+                </div>
+
+                <div>
+                    <label>
+                        <input type="checkbox" name="terms" required> I agree to the Terms and Conditions
+                    </label>
+                </div>
+
+                <div>
+                    <button type="submit">Submit Registration</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Tech Academy. All rights reserved.</p>
+    </footer>
+</body>
+</html>
